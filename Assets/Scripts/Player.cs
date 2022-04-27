@@ -40,11 +40,11 @@ public class Player : MonoBehaviour
         }
         if (!Input.GetMouseButton(0) && PickedUpObjects.Count<10)
         {
-            Collider[] collidersArround = Physics.OverlapSphere(transform.position, 1.5f, axeUseLayer);
+            Collider[] collidersArround = Physics.OverlapSphere(transform.position, 2f, axeUseLayer);
             if (collidersArround.Length > 0)
             {
                 axe.SetActive(true);
-                Collider[] attackable = Physics.OverlapSphere(transform.position, 0.5f, axeUseLayer);
+                Collider[] attackable = Physics.OverlapSphere(transform.position, 0.8f, axeUseLayer);
                 if (attackable.Length>0)
                 {
                     GameObject toAttackObject = attackable[0].gameObject;
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     public IEnumerator CheckAnimationCompleted(GameObject g)
     {
         isAxing = true;
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(1.5f);
         if (g.GetComponent<Tree>())
         {
             Tree t = g.GetComponent<Tree>();
@@ -83,8 +83,7 @@ public class Player : MonoBehaviour
             {
                 for (int i = 0; i < t.logCount; i++)
                 {
-                   GameObject log = Instantiate(t.log, g.transform.position, Quaternion.identity, StackPos);
-                    PickedUpObjects.Add(log);
+                   GameObject log = Instantiate(t.log, g.transform.position, Quaternion.identity, StackPos); PickedUpObjects.Add(log);
                 }
                 axe.SetActive(false);
                 anim.SetBool("Axing", false);

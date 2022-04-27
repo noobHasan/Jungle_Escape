@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6901927223236911524}
   - component: {fileID: 9171238511928737644}
   - component: {fileID: 6192161845196144555}
-  - component: {fileID: 2010679563}
   m_Layer: 7
   m_Name: Tree
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4956332670671765617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.6484919, y: -1.6711664, z: 1.8105297}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6126091556477775235, guid: 3f49cb4637d220d47818acec75682bd7, type: 3}
-  - {fileID: -9117483709511198939, guid: 3f49cb4637d220d47818acec75682bd7, type: 3}
+  - {fileID: 2100000, guid: b1ef9f4c52b7641a28eee64d620f5538, type: 2}
+  - {fileID: 2100000, guid: 1e1a468b971ea4393b42ff9fa66a9438, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,16 +112,3 @@ MonoBehaviour:
   logCount: 2
   log: {fileID: 3826890878965881118, guid: 4fa91bd01ce5db24fb87baa63912f59f, type: 3}
   hitPoint: 2
---- !u!65 &2010679563
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4956332670671765617}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.94847995, y: 1.9409999, z: 0.94847995}
-  m_Center: {x: 0, y: 0.97049993, z: 0}

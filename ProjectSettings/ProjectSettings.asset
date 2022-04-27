@@ -146,7 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.CarWorkshop
+    Android: com.DefaultCompany.JungleEscape
     Standalone: com.DefaultCompany.CarWorkshop
   buildNumber:
     Standalone: 0
