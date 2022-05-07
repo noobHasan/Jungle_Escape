@@ -98,15 +98,22 @@ public class Player : MonoBehaviour
             anim.SetBool("Axing", false);
         }
 
+
+
     }
     public IEnumerator CheckAnimationCompleted(GameObject g)
     {
         isAxing = true;
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(0.8f);
+
+      
+        g.transform.DOShakeScale(.5f, 10);
+        yield return new WaitForSeconds(0.6f);
+        g.transform.localScale *= 0.8f;
         if (g.GetComponent<Resource>())
         {
             Resource t = g.GetComponent<Resource>();
-            g.transform.localScale *= 0.8f;
+  
             t.hitPoint--;
             if (t.hitPoint <= 0)
             {
